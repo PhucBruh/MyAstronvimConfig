@@ -9,5 +9,13 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   ------------------------------------------------------
 
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  --- Completion plugins
+  ------------------------------------------------------
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  ------------------------------------------------------
+
+  --- editing-support plugins
+  ------------------------------------------------------
+  { import = "astrocommunity.editing-support." },
+  ------------------------------------------------------
 }
