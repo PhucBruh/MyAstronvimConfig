@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -51,6 +51,24 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+    setup_handlers = {
+      -- add custom handler
+      -- NOTE: Ignore warning of pycodestyle like E501 e.g
+      pylsp = function(_, opts)
+        require("lspconfig").pylsp.setup {
+          settings = {
+            pylsp = {
+              plugins = {
+                jedi_completion = {
+                  include_params = true,
+                },
+                pycodestyle = { enabled = false },
+              },
+            },
+          },
+        }
+      end,
     },
   },
 
