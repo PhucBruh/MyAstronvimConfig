@@ -15,6 +15,7 @@ return {
   --- Colorscheme plugins
   ------------------------------------------------------
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
   ------------------------------------------------------
 
   --- Completion plugins
